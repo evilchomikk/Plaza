@@ -1,0 +1,18 @@
+databaseChangeLog:
+        - include:
+            file: classpath:db/changelog/changes/20240304_init_database.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_notification_type.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_city.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_statuses.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_order_type.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_notification.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_user.yaml
+        - include:
+            file: classpath:db/changelog/changes/20240304_create_table_orders.yaml
+

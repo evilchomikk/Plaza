@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE TABLE NOTIFICATION_TYPE
+      author: martinezxcv
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: NOTIFICATION_TYPE
+      changes:
+        - createTable:
+            tableName: NOTIFICATION_TYPE
+            columns:
+              - column:
+                  name: Id_NotType
+                  type: INT
+                  constraints:
+                    - primaryKey: TRUE
+                      primaryKeyName: Id_NotType_PK
+              - column:
+                  name: NotType_Name
+                  type: VARCHAR(30)
+                  constraints:
+                    - nullable: FALSE

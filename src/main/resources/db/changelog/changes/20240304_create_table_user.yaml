@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE TABLE USER
+      author: martinezxcv
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: USER
+      changes:
+        - createTable:
+            tableName: USER
+            columns:
+              - column:
+                  name: Id_User
+                  type: INT
+                  constraints:
+                    - primaryKey: TRUE
+                      primaryKeyName: Id_User_PK
+              - column:
+                  name: Username
+                  type: VARCHAR(20)
+                  constraints:
+                    - nullable: FALSE
+              - column:
+                  name: Password
+                  type: VARCHAR(16)
+                  constraints:
+                    - nullable: FALSE
+              - column:
+                  name: Currency
+                  type: NUMERIC(5, 2)
+                  constraints:
+                    - nullable: FALSE

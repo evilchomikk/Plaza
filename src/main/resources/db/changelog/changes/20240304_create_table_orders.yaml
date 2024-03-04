@@ -1,0 +1,65 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE TABLE ORDERS
+      author: martinezxcv
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: ORDERS
+      changes:
+        - createTable:
+            tableName: ORDERS
+            columns:
+              - column:
+                  name: Id_Order
+                  type: INT
+                  constraints:
+                    - primaryKey: TRUE
+                      primaryKeyName: Id_Order_PK
+              - column:
+                  name: Id_City
+                  type: INT
+                  constraints:
+                    - foreignKeyName: Id_City_FK
+                      references: CITY(Id_City)
+                      onDelete: CASCADE
+                      onUpdate: CASCADE
+                      nullable: FALSE
+                    - nullable: FALSE
+              - column:
+                    name: Id_Statuses
+                    type: INT
+                    constraints:
+                        - foreignKeyName: Id_Statuses_FK
+                          references: STATUSES(Id_Statuses)
+                          onDelete: CASCADE
+                          onUpdate: CASCADE
+                          nullable: FALSE
+                        - nullable: FALSE
+              - column:
+                    name: Id_OrderType
+                    type: INT
+                    constraints:
+                      - foreignKeyName: Id_OrderType_FK
+                        references: ORDER_TYPE(Id_OrderType)
+                        onDelete: CASCADE
+                        onUpdate: CASCADE
+                        nullable: FALSE
+                      - nullable: FALSE
+              - column:
+                    name: Start_Date_Order
+                    type: TIMESTAMP
+                    constraints:
+                        - nullable: FALSE
+              - column:
+                    name: End_Date_Order
+                    type: TIMESTAMP
+                    constraints:
+                        - nullable: FALSE
+              - column:
+                    name: isActive
+                    type: smallint
+                    constraints:
+                        - nullable: FALSE
+

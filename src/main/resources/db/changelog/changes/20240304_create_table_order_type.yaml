@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE TABLE ORDER_TYPE
+      author: martinezxcv
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: ORDER_TYPE
+      changes:
+        - createTable:
+            tableName: ORDER_TYPE
+            columns:
+              - column:
+                  name: Id_OrderType
+                  type: INT
+                  constraints:
+                    - primaryKey: TRUE
+                      primaryKeyName: Id_OrderType_PK
+              - column:
+                  name: OrderType_Name
+                  type: VARCHAR(30)
+                  constraints:
+                    - nullable: FALSE

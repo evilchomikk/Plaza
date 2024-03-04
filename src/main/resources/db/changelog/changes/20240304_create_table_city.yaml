@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: CREATE TABLE CITY
+      author: martinezxcv
+      preConditions:
+        - onFail: MARK_RAN
+          not:
+            tableExists:
+              tableName: CITY
+      changes:
+        - createTable:
+            tableName: CITY
+            columns:
+              - column:
+                  name: Id_City
+                  type: INT
+                  constraints:
+                    - primaryKey: TRUE
+                      primaryKeyName: Id_City_PK
+              - column:
+                  name: City_Name
+                  type: VARCHAR(60)
+                  constraints:
+                    - nullable: FALSE
