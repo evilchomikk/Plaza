@@ -15,10 +15,10 @@ databaseChangeLog:
                   name: Id_Statuses
                   type: INT
                   constraints:
-                    - primaryKey: TRUE
+                      primaryKey: TRUE
                       primaryKeyName: Id_Statuses_PK
               - column:
                   name: Statuses_Name
                   type: VARCHAR(30)
                   constraints:
-                    - nullable: FALSE
+                    nullable: FALSE

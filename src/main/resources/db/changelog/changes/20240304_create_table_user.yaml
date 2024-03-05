@@ -15,20 +15,20 @@ databaseChangeLog:
                   name: Id_User
                   type: INT
                   constraints:
-                    - primaryKey: TRUE
-                      primaryKeyName: Id_User_PK
+                     primaryKey: TRUE
+                     primaryKeyName: Id_User_PK
               - column:
                   name: Username
                   type: VARCHAR(20)
                   constraints:
-                    - nullable: FALSE
+                     nullable: FALSE
               - column:
                   name: Password
                   type: VARCHAR(16)
                   constraints:
-                    - nullable: FALSE
+                     nullable: FALSE
               - column:
                   name: Currency
                   type: NUMERIC(5, 2)
                   constraints:
-                    - nullable: FALSE
+                     nullable: FALSE

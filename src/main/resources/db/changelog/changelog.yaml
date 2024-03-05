@@ -1,18 +1,26 @@
 databaseChangeLog:
         - include:
-            file: classpath:db/changelog/changes/20240304_init_database.yaml
+            file: ./changes/20240304_init_database.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_notification_type.yaml
+            file: ./changes/20240304_create_table_notification_type.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_city.yaml
+            file: ./changelog/changes/20240304_create_table_city.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_statuses.yaml
+            file: ./changelog/changes/20240304_create_table_statuses.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_order_type.yaml
+            file: ./changelog/changes/20240304_create_table_order_type.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_notification.yaml
+            file: ./changelog/changes/20240304_create_table_notification.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_user.yaml
+            file: ./changelog/changes/20240304_create_table_user.yaml
+            relativeToChangelogFile: true
         - include:
-            file: classpath:db/changelog/changes/20240304_create_table_orders.yaml
+            file: ./changelog/changes/20240304_create_table_orders.yaml
+            relativeToChangelogFile: true
 

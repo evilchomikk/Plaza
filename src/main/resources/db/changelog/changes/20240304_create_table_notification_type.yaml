@@ -15,10 +15,10 @@ databaseChangeLog:
                   name: Id_NotType
                   type: INT
                   constraints:
-                    - primaryKey: TRUE
+                      primaryKey: TRUE
                       primaryKeyName: Id_NotType_PK
               - column:
                   name: NotType_Name
                   type: VARCHAR(30)
                   constraints:
-                    - nullable: FALSE
+                     nullable: FALSE
