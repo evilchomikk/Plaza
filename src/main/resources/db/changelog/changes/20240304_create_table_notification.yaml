@@ -2,6 +2,7 @@ databaseChangeLog:
   - changeSet:
       id: CREATE TABLE NOTIFICATION
       author: martinezxcv
+
       preConditions:
         - onFail: MARK_RAN
           not:
@@ -15,30 +16,28 @@ databaseChangeLog:
                   name: Id_Notification
                   type: INT
                   constraints:
-                    - primaryKey: TRUE
-                      primaryKeyName: Id_Notification_PK
+                    primaryKey: TRUE
               - column:
                   name: Id_Order
                   type: INT
                   constraints:
-                    - foreignKeyName: Id_Order_FK
+                      foreignKeyName: Id_Order_FK
                       references: ORDER(Id_Order)
-                      onDelete: CASCADE
-                      onUpdate: CASCADE
                       nullable: FALSE
-                    - nullable: FALSE
+                      deleteCascade: true
+
+
               - column:
                   name: Id_NotType
                   type: INT
                   constraints:
-                    - foreignKeyName: Id_NotType_FK
+                      foreignKeyName: Id_NotType_FK
                       references: NOTIFICATION_TYPE(Id_NotType)
-                      onDelete: CASCADE
-                      onUpdate: CASCADE
+                      deleteCascade: true
                       nullable: FALSE
-                    - nullable: FALSE
+
               - column:
                   name: Notification_Message
                   type: LONG VARCHAR
                   constraints:
-                    - nullable: FALSE
+                     nullable: FALSE

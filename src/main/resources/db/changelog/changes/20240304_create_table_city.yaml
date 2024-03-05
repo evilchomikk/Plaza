@@ -15,10 +15,10 @@ databaseChangeLog:
                   name: Id_City
                   type: INT
                   constraints:
-                    - primaryKey: TRUE
-                      primaryKeyName: Id_City_PK
+                    primaryKey: true
+
               - column:
                   name: City_Name
                   type: VARCHAR(60)
                   constraints:
-                    - nullable: FALSE
+                    nullable: false
