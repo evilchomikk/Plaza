@@ -4,15 +4,15 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/202403051304_create_table_notification_type.yaml
   - include:
-      file: db/changelog/changes/202403051304_create_table_city.yaml
+      file: db/changelog/changes/202403051304_create_table_orders.yaml
   - include:
-      file: db/changelog/changes/202403051306_create_table_statuses.yaml
+      file: db/changelog/changes/202403051304_create_table_city.yaml
   - include:
       file: db/changelog/changes/202403051304_create_table_order_type.yaml
   - include:
       file: db/changelog/changes/202403051305_create_table_notification.yaml
   - include:
-      file: db/changelog/changes/202403051307_create_table_user.yaml
+      file: db/changelog/changes/202403051306_create_table_statuses.yaml
   - include:
-      file: db/changelog/changes/202403051308_create_table_orders.yaml
+      file: db/changelog/changes/202403051307_create_table_user.yaml
 
