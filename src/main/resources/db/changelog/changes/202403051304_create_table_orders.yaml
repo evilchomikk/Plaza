@@ -42,13 +42,13 @@ databaseChangeLog:
                         deleteCascade: true
                         nullable: FALSE
               - column:
-                    name: Start_Date_Order
-                    type: TIMESTAMP
+                    name: End_Date_Order
+                    type: DATETIME
                     constraints:
                          nullable: FALSE
               - column:
-                    name: End_Date_Order
-                    type: TIMESTAMP
+                    name: Start_Date_Order
+                    type: DATETIME
                     constraints:
                          nullable: FALSE
               - column:

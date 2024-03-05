@@ -22,7 +22,7 @@ databaseChangeLog:
                   type: INT
                   constraints:
                       foreignKeyName: Id_Order_FK
-                      references: ORDER(Id_Order)
+                      references: ORDERS(Id_Order)
                       nullable: FALSE
                       deleteCascade: true
 
