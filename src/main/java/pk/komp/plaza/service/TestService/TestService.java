@@ -1,4 +1,4 @@
-package pk.komp.plaza.service;
+package pk.komp.plaza.service.TestService;
 
 public interface TestService {
 

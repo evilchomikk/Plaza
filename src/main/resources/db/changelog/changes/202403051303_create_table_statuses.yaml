@@ -17,6 +17,7 @@ databaseChangeLog:
                   constraints:
                       primaryKey: TRUE
                       primaryKeyName: Id_Statuses_PK
+
               - column:
                   name: Statuses_Name
                   type: VARCHAR(30)
