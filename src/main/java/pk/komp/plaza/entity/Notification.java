@@ -23,8 +23,8 @@ public class Notification {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_NotType", nullable = false)
-    private NotificationType idNottype;
-    
+    private NotificationType idNotType;
+
     @Column(name = "Notification_Message", nullable = false)
     private String notificationMessage;
 

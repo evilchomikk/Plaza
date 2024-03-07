@@ -17,6 +17,6 @@ public class NotificationType {
     private Integer id;
 
     @Column(name = "NotType_Name", nullable = false, length = 30)
-    private String nottypeName;
+    private String notTypeName;
 
 }

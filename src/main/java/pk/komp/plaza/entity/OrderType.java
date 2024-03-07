@@ -17,6 +17,6 @@ public class OrderType {
     private Integer id;
 
     @Column(name = "OrderType_Name", nullable = false, length = 30)
-    private String ordertypeName;
+    private String orderTypeName;
 
 }

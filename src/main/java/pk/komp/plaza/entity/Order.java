@@ -30,7 +30,7 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_OrderType", nullable = false)
-    private OrderType idOrdertype;
+    private OrderType idOrderType;
 
     @Column(name = "End_Date_Order", nullable = false)
     private Instant endDateOrder;
