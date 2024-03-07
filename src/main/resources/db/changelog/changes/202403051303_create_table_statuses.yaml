@@ -14,10 +14,10 @@ databaseChangeLog:
               - column:
                   name: Id_Statuses
                   type: INT
+                  autoIncrement: true
                   constraints:
                       primaryKey: TRUE
                       primaryKeyName: Id_Statuses_PK
-
               - column:
                   name: Statuses_Name
                   type: VARCHAR(30)

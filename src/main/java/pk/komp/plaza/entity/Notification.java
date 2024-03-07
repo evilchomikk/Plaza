@@ -9,7 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-@Table(name = "NOTIFICATION")
+@Table(name = "notification")
 public class Notification {
     @Id
     @Column(name = "Id_Notification", nullable = false)
@@ -24,8 +24,7 @@ public class Notification {
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_NotType", nullable = false)
     private NotificationType idNottype;
-
-   // @Lob
+    
     @Column(name = "Notification_Message", nullable = false)
     private String notificationMessage;
 

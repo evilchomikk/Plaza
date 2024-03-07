@@ -14,6 +14,7 @@ import pk.komp.plaza.repository.UserRepository;
 @RequiredArgsConstructor
 public class MyUserDetailsService implements UserDetailsService {
 
+
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 

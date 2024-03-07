@@ -1,17 +1,16 @@
 package pk.komp.plaza.entity;
 
-
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "CITY")
+@Table(name = "city")
 public class City {
     @Id
     @Column(name = "Id_City", nullable = false)
@@ -19,8 +18,5 @@ public class City {
 
     @Column(name = "City_Name", nullable = false, length = 60)
     private String cityName;
-
-    @OneToMany(mappedBy = "idCity")
-    private Set<Order> orders = new LinkedHashSet<>();
 
 }

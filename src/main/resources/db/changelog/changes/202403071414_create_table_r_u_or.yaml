@@ -1,25 +1,23 @@
 databaseChangeLog:
   - changeSet:
-      id: CREATE TABLE CITY
+      id: CREATE TABLE R_U_OR
       author: martinezxcv
       preConditions:
         - onFail: MARK_RAN
           not:
             tableExists:
-              tableName: CITY
+              tableName: R_U_OR
       changes:
         - createTable:
-            tableName: CITY
+            tableName: R_U_OR
             columns:
               - column:
-                  name: Id_City
+                  name: Id_Order
                   type: INT
-                  autoIncrement: true
                   constraints:
                     primaryKey: true
-
               - column:
-                  name: City_Name
-                  type: VARCHAR(60)
+                  name: Id_User
+                  type: INT
                   constraints:
-                    nullable: false
+                    primaryKey: true

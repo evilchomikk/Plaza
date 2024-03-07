@@ -14,6 +14,7 @@ databaseChangeLog:
               - column:
                   name: Id_OrderType
                   type: INT
+                  autoIncrement: true
                   constraints:
                       primaryKey: TRUE
                       primaryKeyName: Id_OrderType_PK

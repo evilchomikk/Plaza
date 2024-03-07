@@ -14,6 +14,7 @@ databaseChangeLog:
               - column:
                   name: Id_NotType
                   type: INT
+                  autoIncrement: true
                   constraints:
                       primaryKey: TRUE
                       primaryKeyName: Id_NotType_PK

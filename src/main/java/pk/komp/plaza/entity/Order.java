@@ -7,13 +7,11 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.Instant;
-import java.util.LinkedHashSet;
-import java.util.Set;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "ORDERS")
+@Table(name = "orders")
 public class Order {
     @Id
     @Column(name = "Id_Order", nullable = false)
@@ -42,8 +40,5 @@ public class Order {
 
     @Column(name = "isActive", nullable = false)
     private Short isActive;
-
-    @OneToMany(mappedBy = "idOrder")
-    private Set<Notification> notifications = new LinkedHashSet<>();
 
 }

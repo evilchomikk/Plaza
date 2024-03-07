@@ -15,6 +15,7 @@ databaseChangeLog:
               - column:
                   name: Id_Notification
                   type: INT
+                  autoIncrement: true
                   constraints:
                     primaryKey: TRUE
               - column:
