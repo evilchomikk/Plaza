@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -18,23 +19,11 @@ public class SecurityConfig {
 
         //https://docs.spring.io/spring-security/reference/migration-7/configuration.html
 
-        http
-                .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/test/test").authenticated()
-                        .requestMatchers("/**").permitAll()
+        http.authorizeHttpRequests(authorize -> authorize
                         .anyRequest().authenticated()
-                )
-                .formLogin(login -> {// to jest tak zrobione zebby domyślna stronsa logowania była
-                            try {
-                                login.init(http);
-                            } catch (Exception e) {
-                                throw new RuntimeException(e);
-                            }
-                        }
-                )
+                ).rememberMe(Customizer.withDefaults());
 
-                .rememberMe(Customizer.withDefaults());
-
+        http.csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
 
