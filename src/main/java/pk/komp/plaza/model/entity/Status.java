@@ -1,4 +1,4 @@
-package pk.komp.plaza.entity;
+package pk.komp.plaza.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,13 +10,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "order_type")
-public class OrderType {
+@Table(name = "STATUSES")
+public class Status {
     @Id
-    @Column(name = "Id_OrderType", nullable = false)
+    @Column(name = "Id_Statuses", nullable = false)
     private Integer id;
 
-    @Column(name = "OrderType_Name", nullable = false, length = 30)
-    private String orderTypeName;
+    @Column(name = "Statuses_Name", nullable = false, length = 30)
+    private String statusesName;
 
 }

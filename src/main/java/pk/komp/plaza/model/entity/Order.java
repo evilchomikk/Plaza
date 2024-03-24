@@ -1,4 +1,4 @@
-package pk.komp.plaza.entity;
+package pk.komp.plaza.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,11 +7,13 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.time.Instant;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "orders")
+@Table(name = "ORDERS")
 public class Order {
     @Id
     @Column(name = "Id_Order", nullable = false)
@@ -30,7 +32,7 @@ public class Order {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_OrderType", nullable = false)
-    private OrderType idOrderType;
+    private OrderType idOrdertype;
 
     @Column(name = "End_Date_Order", nullable = false)
     private Instant endDateOrder;
@@ -40,5 +42,8 @@ public class Order {
 
     @Column(name = "isActive", nullable = false)
     private Short isActive;
+
+    @OneToMany(mappedBy = "idOrder")
+    private Set<Notification> notifications = new LinkedHashSet<>();
 
 }

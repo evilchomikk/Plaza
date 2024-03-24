@@ -8,7 +8,6 @@ spring:
         format_sql: true
         hbm2ddl:
           auto: validate
-        show_sql: true
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

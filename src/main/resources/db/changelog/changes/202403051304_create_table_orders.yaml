@@ -35,6 +35,22 @@ databaseChangeLog:
                           deleteCascade: true
                           nullable: FALSE
               - column:
+                  name: Id_OrderMaker
+                  type: INT
+                  constraints:
+                      foreignKeyName: Id_UserMaker_FK
+                      references: USER(Id_User)
+                      deleteCascade: true
+                      nullable: FALSE
+              - column:
+                  name: Id_OrderTaker
+                  type: INT
+                  constraints:
+                      foreignKeyName: Id_UserTaker_FK
+                      references: USER(Id_User)
+                      deleteCascade: true
+                      nullable: FALSE
+              - column:
                     name: Id_OrderType
                     type: INT
                     constraints:
@@ -47,6 +63,11 @@ databaseChangeLog:
                     type: DATETIME
                     constraints:
                          nullable: FALSE
+              - column:
+                  name: Value
+                  type: DECIMAL(10, 2)
+                  constraints:
+                    nullable: FALSE
               - column:
                     name: Start_Date_Order
                     type: DATETIME

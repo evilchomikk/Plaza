@@ -2,7 +2,7 @@ package pk.komp.plaza.service.MyUserDetailsService;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import pk.komp.plaza.entity.User;
+import pk.komp.plaza.model.entity.User;
 
 import java.util.Collection;
 import java.util.List;

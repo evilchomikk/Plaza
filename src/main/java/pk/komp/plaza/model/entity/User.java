@@ -1,4 +1,4 @@
-package pk.komp.plaza.entity;
+package pk.komp.plaza.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Getter
 @Setter
 @Entity
-@Table(name = "user")
+@Table(name = "USER")
 public class User {
     @Id
     @Column(name = "Id_User", nullable = false)

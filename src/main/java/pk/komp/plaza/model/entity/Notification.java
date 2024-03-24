@@ -1,4 +1,4 @@
-package pk.komp.plaza.entity;
+package pk.komp.plaza.model.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -9,7 +9,7 @@ import org.hibernate.annotations.OnDeleteAction;
 @Getter
 @Setter
 @Entity
-@Table(name = "notification")
+@Table(name = "NOTIFICATION")
 public class Notification {
     @Id
     @Column(name = "Id_Notification", nullable = false)
@@ -23,7 +23,7 @@ public class Notification {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_NotType", nullable = false)
-    private NotificationType idNotType;
+    private NotificationType idNottype;
 
     @Column(name = "Notification_Message", nullable = false)
     private String notificationMessage;
