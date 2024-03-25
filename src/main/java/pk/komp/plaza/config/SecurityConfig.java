@@ -20,10 +20,11 @@ public class SecurityConfig {
         //https://docs.spring.io/spring-security/reference/migration-7/configuration.html
 
         http.authorizeHttpRequests(authorize -> authorize
-                        .anyRequest().authenticated()
-                ).rememberMe(Customizer.withDefaults());
+                .anyRequest().permitAll()
+        ).rememberMe(Customizer.withDefaults());
 
         http.csrf(AbstractHttpConfigurer::disable);
+
         return http.build();
     }
 

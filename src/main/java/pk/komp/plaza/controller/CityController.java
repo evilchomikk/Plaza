@@ -17,7 +17,7 @@ public class CityController {
 
     private final CityService cityService;
 
-    @GetMapping("/all")
+    @GetMapping("/getAllCities")
     public ResponseEntity<List<CityDto>> getAllCities() {
         return ResponseEntity.ok(cityService.getAllCities());
     }
