@@ -49,7 +49,7 @@ databaseChangeLog:
                       foreignKeyName: Id_UserTaker_FK
                       references: USER(Id_User)
                       deleteCascade: true
-                      nullable: FALSE
+                      nullable: TRUE
               - column:
                     name: Id_OrderType
                     type: INT

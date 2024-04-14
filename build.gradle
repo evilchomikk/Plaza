@@ -29,6 +29,9 @@ dependencies {
 	implementation 'org.jboss.logging:jboss-logging:3.4.2.Final' // Use the appropriate version
 	implementation 'org.hibernate:hibernate-core:6.4.4.Final'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.mapstruct:mapstruct:1.5.5.Final'
+
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.5.Final'
 
 
 	// the appropriate version
