@@ -1,9 +1,8 @@
 package pk.komp.plaza.model.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.Value;
+import lombok.*;
+import pk.komp.plaza.model.entity.City;
+import pk.komp.plaza.model.entity.Status;
 import pk.komp.plaza.model.entity.User;
 
 import java.io.Serializable;
@@ -17,12 +16,13 @@ import java.time.Instant;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class OrderDto {
-    CityDto idCity;
-    StatusDto idStatuses;
+    String cityName;
+    String statusName;
     User idOrdermaker;
     User idOrdertaker;
-    OrderTypeDto idOrdertype;
+    String orderTypeName;
     String duration;
     BigDecimal value;
     Short isActive;
