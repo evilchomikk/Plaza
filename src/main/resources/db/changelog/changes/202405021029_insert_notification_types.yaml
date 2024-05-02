@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: ADD_NOTIFICATION_TYPES
+      author: martinezxcv
+      changes:
+        - sql:
+            sql: |
+              INSERT INTO NOTIFICATION_TYPE (NotType_Name) VALUES ('Email');
+              INSERT INTO NOTIFICATION_TYPE (NotType_Name) VALUES ('SMS');
+              INSERT INTO NOTIFICATION_TYPE (NotType_Name) VALUES ('Push Notification');

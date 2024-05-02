@@ -25,4 +25,10 @@ public class OrderController {
         return ResponseEntity.ok(orderService.getOrdersByCity(cityName));
     }
 
+    @PostMapping("/acceptOrder/{orderId}")
+    public ResponseEntity<Void> acceptOrder(@PathVariable int orderId) {
+        orderService.acceptOrder(orderId);
+        return ResponseEntity.ok().build();
+    }
+
 }

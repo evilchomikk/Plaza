@@ -13,6 +13,7 @@ public interface OrderMapper {
 
     default OrderDto toDto(Order order){
         return new OrderDto(
+                order.getId(),
                 order.getIdCity().getCityName(),
                 order.getIdStatuses().getStatusesName(),
                 order.getIdOrdermaker(),
@@ -31,4 +32,5 @@ public interface OrderMapper {
         long remainingMinutes = duration.minusHours(totalHours).toMinutes();
         return totalHours + " hours, " + remainingMinutes + " minutes";
     }
+
 }

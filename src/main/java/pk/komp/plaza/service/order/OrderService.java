@@ -8,4 +8,6 @@ public interface OrderService {
 
     List<OrderDto> getAllOrders();
     List<OrderDto> getOrdersByCity(String cityName);
+    void acceptOrder(int orderId);
+    void rejectOrder(int orderId);
 }

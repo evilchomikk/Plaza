@@ -18,6 +18,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 public class OrderDto {
+    int id;
     String cityName;
     String statusName;
     User idOrdermaker;

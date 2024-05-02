@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: ADD_USERS
+      author: martinezxcv
+      changes:
+        - sql:
+            sql: |
+              INSERT INTO USER (Username, Password, Currency) VALUES ('Zdzichu123', 'password', 10.00);
+              INSERT INTO USER (Username, Password, Currency) VALUES ('Bolo', 'password', 15.00);
+              INSERT INTO USER (Username, Password, Currency) VALUES ('Sezamekx', 'password', 20.00);

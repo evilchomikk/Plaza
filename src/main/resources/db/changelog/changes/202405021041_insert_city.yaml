@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: ADD_POLISH_SEA_CITIES
+      author: martinezxcv
+      changes:
+        - sql:
+            sql: |
+              
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Kolobrzeg', 54.175010, 15.584827);
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Mielno', 54.263474, 16.073551);
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Dabki', 54.342168, 16.371568);
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Uniescie', 54.180619, 16.053152);
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Lazy', 54.205462, 16.034204);
+              INSERT INTO CITY (City_Name, Latitude, Longitude) VALUES ('Gaski', 54.154310, 15.996511);

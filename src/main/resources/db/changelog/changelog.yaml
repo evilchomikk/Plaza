@@ -15,4 +15,17 @@ databaseChangeLog:
       file: db/changelog/changes/202403051304_create_table_orders.yaml
   - include:
       file: db/changelog/changes/202403051305_create_table_notification.yaml
-
+  - include:
+      file: db/changelog/changes/202405021027_insert_statuses.yaml
+  - include:
+      file: db/changelog/changes/202405021029_insert_notification_types.yaml
+  - include:
+      file: db/changelog/changes/202405021036_insert_order_type.yaml
+  - include:
+      file: db/changelog/changes/202405021041_insert_city.yaml
+  - include:
+      file: db/changelog/changes/202405021044_insert_users.yaml
+  - include:
+      file: db/changelog/changes/202405021049_insert_orders.yaml
+  - include:
+      file: db/changelog/changes/202405021054_insert_notifications.yaml

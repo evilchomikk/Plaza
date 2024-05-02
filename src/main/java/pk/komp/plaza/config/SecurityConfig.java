@@ -26,6 +26,7 @@ public class SecurityConfig {
 
         http.authorizeHttpRequests(authorize -> authorize
                 .anyRequest().permitAll()
+
         ).rememberMe(Customizer.withDefaults());
 
         http.csrf(AbstractHttpConfigurer::disable);
