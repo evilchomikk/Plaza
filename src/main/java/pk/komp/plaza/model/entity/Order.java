@@ -34,7 +34,7 @@ public class Order {
     @JoinColumn(name = "Id_OrderMaker", nullable = false)
     private User idOrdermaker;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = true)
+    @ManyToOne(fetch = FetchType.EAGER, optional = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
     @JoinColumn(name = "Id_OrderTaker")
     private User idOrdertaker;
