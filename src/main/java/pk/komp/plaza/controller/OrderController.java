@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import pk.komp.plaza.model.dto.OrderDto;
 import pk.komp.plaza.service.order.OrderService;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -34,6 +35,12 @@ public class OrderController {
     @PostMapping("/addOrder")
     public ResponseEntity<Void> addOrder(@RequestBody OrderDto orderDto) {
         orderService.addOrder(orderDto);
+        return ResponseEntity.ok().build();
+    }
+
+    @PostMapping("/addOrderWithLocation")
+    public ResponseEntity<Void> addOrder(@RequestBody OrderDto orderDto, @RequestParam BigDecimal x, @RequestParam BigDecimal y) {
+        orderService.addOrderWithLocation(orderDto, x, y);
         return ResponseEntity.ok().build();
     }
 

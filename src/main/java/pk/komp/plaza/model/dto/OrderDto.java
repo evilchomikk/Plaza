@@ -27,4 +27,6 @@ public class OrderDto {
     String duration;
     BigDecimal value;
     Short isActive;
+    BigDecimal x;
+    BigDecimal y;
 }

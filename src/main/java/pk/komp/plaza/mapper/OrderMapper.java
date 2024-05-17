@@ -21,8 +21,9 @@ public interface OrderMapper {
                 order.getIdOrdertype().getOrdertypeName(),
                 mapToDuration(order.getStartDateOrder(), order.getEndDateOrder()),
                 order.getValue(),
-                order.getIsActive()
-
+                order.getIsActive(),
+                order.getX(),
+                order.getY()
         );
     }
 

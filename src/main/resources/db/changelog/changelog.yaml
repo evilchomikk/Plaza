@@ -29,3 +29,5 @@ databaseChangeLog:
       file: db/changelog/changes/202405021049_insert_orders.yaml
   - include:
       file: db/changelog/changes/202405021054_insert_notifications.yaml
+  - include:
+        file: db/changelog/changes/202405161420_add_columns_for_orders_table.yaml

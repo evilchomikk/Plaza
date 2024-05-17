@@ -76,4 +76,26 @@ public class OrderServiceImpl implements OrderService{
         order.setIsActive((short) 1);
         orderRepository.save(order);
     }
+
+    @Override
+    public void addOrderWithLocation(OrderDto orderDto, BigDecimal x, BigDecimal y) {
+        Order order = new Order();
+        order.setIdCity(cityRepository.findByCityName(orderDto.getCityName()).getFirst());
+        order.setIdOrdertype(orderTypeRepository.findByOrdertypeName(orderDto.getOrderTypeName()).getFirst());
+        order.setValue(orderDto.getValue());
+        order.setStartDateOrder(Instant.now()); // Use Instant.now() to get the current date and time
+        // Calculate end date based on duration
+        Duration duration = Duration.parse(orderDto.getDuration());
+        Instant endDate = Instant.now().plus(duration);
+        order.setEndDateOrder(endDate);
+        order.setIdOrdertaker(null);
+        order.setIdOrdermaker(userRepository.findById(1L).get());
+        order.setIdStatuses(statusRepository.findById(3).get());
+        order.setIsActive((short) 1);
+        order.setX(x);
+        order.setY(y);
+        orderRepository.save(order);
+    }
+
+
 }

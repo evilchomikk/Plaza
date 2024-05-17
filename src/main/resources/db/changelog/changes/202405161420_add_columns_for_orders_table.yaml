@@ -1,0 +1,18 @@
+databaseChangeLog:
+ - changeSet:
+    id: add-x-y-columns-to-orders
+    author: martinezxcv
+    changes:
+      - addColumn:
+          tableName: ORDERS
+          columns:
+            - column:
+                name: x
+                type: DECIMAL(9, 6)
+                constraints:
+                  nullable: TRUE
+            - column:
+                name: y
+                type: DECIMAL(9, 6)
+                constraints:
+                  nullable: TRUE
