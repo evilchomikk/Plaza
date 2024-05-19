@@ -39,8 +39,8 @@ public class OrderController {
     }
 
     @PostMapping("/addOrderWithLocation")
-    public ResponseEntity<Void> addOrder(@RequestBody OrderDto orderDto, @RequestParam BigDecimal x, @RequestParam BigDecimal y) {
-        orderService.addOrderWithLocation(orderDto, x, y);
+    public ResponseEntity<Void> addOrderWithLocation(@RequestBody OrderDto orderDto) {
+        orderService.addOrderWithLocation(orderDto);
         return ResponseEntity.ok().build();
     }
 

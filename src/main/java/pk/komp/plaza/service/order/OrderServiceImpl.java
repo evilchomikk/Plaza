@@ -78,7 +78,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public void addOrderWithLocation(OrderDto orderDto, BigDecimal x, BigDecimal y) {
+    public void addOrderWithLocation(OrderDto orderDto) {
         Order order = new Order();
         order.setIdCity(cityRepository.findByCityName(orderDto.getCityName()).getFirst());
         order.setIdOrdertype(orderTypeRepository.findByOrdertypeName(orderDto.getOrderTypeName()).getFirst());
@@ -92,8 +92,8 @@ public class OrderServiceImpl implements OrderService{
         order.setIdOrdermaker(userRepository.findById(1L).get());
         order.setIdStatuses(statusRepository.findById(3).get());
         order.setIsActive((short) 1);
-        order.setX(x);
-        order.setY(y);
+        order.setX(orderDto.getX());
+        order.setY(orderDto.getY());
         orderRepository.save(order);
     }
 

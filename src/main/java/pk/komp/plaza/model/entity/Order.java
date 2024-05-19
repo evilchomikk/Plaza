@@ -56,9 +56,9 @@ public class Order {
     @Column(name = "isActive", nullable = false)
     private Short isActive;
 
-    @Column(name = "x", nullable = false, precision = 9, scale = 6)
+    @Column(name = "x", nullable = true, precision = 9, scale = 6)
     private BigDecimal x;
 
-    @Column(name = "y", nullable = false, precision = 9, scale = 6)
+    @Column(name = "y", nullable = true, precision = 9, scale = 6)
     private BigDecimal y;
 }

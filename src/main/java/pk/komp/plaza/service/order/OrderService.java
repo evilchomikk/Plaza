@@ -14,5 +14,5 @@ public interface OrderService {
     void acceptOrder(int orderId);
     void rejectOrder(int orderId);
     void addOrder(OrderDto orderDto);
-    void addOrderWithLocation(OrderDto orderDto, BigDecimal x, BigDecimal y);
+    void addOrderWithLocation(OrderDto orderDto);
 }
