@@ -1,7 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: init_tag
-      author: martinezxcv
-      changes:
-        - tagDatabase:
-            tag: init

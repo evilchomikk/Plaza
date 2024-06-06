@@ -1,9 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: ADD_ORDER_TYPES
-      author: martinezxcv
-      changes:
-        - sql:
-            sql: |
-              INSERT INTO ORDER_TYPE (OrderType_Name) VALUES ('wantToBuy');
-              INSERT INTO ORDER_TYPE (OrderType_Name) VALUES ('wantToSell');
